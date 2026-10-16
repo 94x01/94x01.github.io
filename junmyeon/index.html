@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <style>
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 80px 40px;
+            box-sizing: border-box;
+            margin: 0;
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            letter-spacing: 1.5px;
 
+            animation: bg-flicker 7s infinite;
+        }
+
+        /* 2. 기괴한 배경 조명 깜빡임 키프레임 */
+        @keyframes bg-flicker {
+            0%, 100% { background-color: #050505; }
+            48% { background-color: #050505; }
+            49% { background-color: #1a0505; } 
+            50% { background-color: #050505; }
+            75% { background-color: #050505; }
+            76% { background-color: #1f1f1f; } 
+            77% { background-color: #050505; }
+            78% { background-color: #1a1a1a; }
+            79% { background-color: #050505; }
+        }
+
+        .story {
+            text-align: center;
+            font-size: max(1rem, 1.1vw);
+            line-height: 2.2;
+            margin-bottom: 8%;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .flicker-text {
+            animation: eerie-flicker 2.5s infinite alternate;
+            display: inline-block;
+        }
+
+        @keyframes eerie-flicker {
+            0%, 100% { opacity: 1; text-shadow: 0 0 2px #fff; }
+            12% { opacity: 0.3; text-shadow: none; }
+            13% { opacity: 1; text-shadow: 0 0 6px #ff0000; }
+            14% { opacity: 0.1; }
+            15% { opacity: 0.9; text-shadow: 0 0 3px #ff0000; }
+            16% { opacity: 0.2; }
+            17% { opacity: 1; text-shadow: 0 0 2px #fff; }
+            70% { opacity: 1; text-shadow: 0 0 2px #fff; }
+            71% { opacity: 0.2; text-shadow: 0 0 10px #ff0000; }
+            72% { opacity: 1; text-shadow: 0 0 2px #fff; }
+        }
+
+        .glitch-red {
+            color: #b30000;
+            font-weight: bold;
+            animation: red-glow 1.5s infinite alternate;
+        }
+
+        @keyframes red-glow {
+            0% { text-shadow: 0 0 2px #500; }
+            100% { text-shadow: 0 0 12px #f00, 0 0 20px #800; }
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #444;
+            color: white;
+            text-align: center;
+            font-size: max(1rem, 1.2vw);
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+            outline: none;
+            transition: border-bottom 0.3s ease;
+            margin-top: 30px;
+            margin-bottom: 80px;
+        }
+
+        input:focus {
+            border-bottom: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="story">
+        <p>복도 끝 조명이 기괴하게 <span class="flicker-text">깜빡거리기</span> 시작합니다.</p>
+        <p>벽면을 따라 불쾌한 진동이 전해져 옵니다.</p>
+        <br>
+        <p>어둠 속에서 무언가 치직거리는 소리와 함께</p>
+        <p>붉은 글씨가 떠올랐다 사라집니다.</p>
+        <br>
+        <p class="glitch-red">"그림자는 빛이 사라질 때 가장 길어진다."</p>
+    </div>
+
+    <input type="text" id="answerInput" placeholder="..." onkeypress="if(event.keyCode==13) checkAnswer()" autocomplete="off">
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answerInput").value.trim().toLowerCase();
+
+            if(answer === "shadow") {
+                window.location.href = "/" + answer + "/";
+            } else if (answer !== "") {
+                alert("아무 일도 일어나지 않았다.");
+                document.getElementById("answerInput").value = ""; 
+            }
+        }
+    </script>
+
+</body>
+</html>
