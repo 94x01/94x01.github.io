@@ -6,25 +6,37 @@
     <title>EveryWhen</title>
     <style>
         body {
-            background-color: #000; /* 조금 더 어두운 블랙 */
+            background-color: #000;
             color: #ccc;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
+            
+            justify-content: flex-start; 
+            min-height: 100vh;          
+            padding: 80px 40px;          
+            box-sizing: border-box;
+            
             margin: 0;
             font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-            letter-spacing: 1.5px; /* 글자 간격 넓히기 */
+            letter-spacing: 1.5px;
         }
+
         .story {
             text-align: center;
-            font-size: 1.2rem;
+            font-size: max(1rem, 1.1vw); 
             line-height: 2.2;
-            margin-bottom: 40px;
+            margin-bottom: 8%;        
+            width: 100%;
+            max-width: 600px;           
         }
-        .hidden-hint:hover {
-            color: #880000; /* 마우스를 올리면 붉은색으로 나타남 */
+
+        .hidden-hint {
+            color: #000;
+            transition: color 0.5s ease;
+        }
+        .hidden-hint:hover, .hidden-hint:active {
+            color: #880000; 
             cursor: pointer;
         }
 
@@ -34,12 +46,16 @@
             border-bottom: 1px solid #444;
             color: white;
             text-align: center;
-            font-size: 1.2rem;
-            padding: 8px 10px;
-            width: 250px;
+            
+            font-size: max(1rem, 1.2vw); 
+            padding: 10px;
+            width: 80%;                 
+            max-width: 300px;           
+            
             outline: none;
             transition: border-bottom 0.3s ease;
             margin-top: 30px;
+            margin-bottom: 80px;       
         }
         input:focus {
             border-bottom: 1px solid #fff;
@@ -48,10 +64,7 @@
 </head>
 <body>
 
-    <!-- 1. 으스스한 배경음악 (유튜브 영상 숨기기 방식) -->
-    <!-- src 부분의 영어 주소를 다른 유튜브 영상 ID로 바꾸면 음악 변경 가능 -->
-    <!-- autoplay=1(자동재생), loop=1(반복재생) 설정 -->
-    <iframe width="0" height="0" src="https://youtu.be/PkedbUCv8d8?si=XQgxusb5qQ3jjHNw" frameborder="0" allow="autoplay"></iframe>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/PkedbUCv8d8?autoplay=1&loop=1&playlist=PkedbUCv8d8" frameborder="0" allow="autoplay"></iframe>
 
     <div class="story">
         <p>"뭐야......."</p>
@@ -63,25 +76,21 @@
         <p>거울을 자세히 들여다보니 창백한 얼굴이 보입니다.</p>
         <p>세훈은 무언가 잊고 있던 것을 떠올리고 있었습니다.</p>
         <br>
-        <!-- 마우스를 올려야 보이는 숨겨진 힌트 -->
+        <!-- 마우스를 올리거나 모바일에서 터치해야 보이는 숨겨진 힌트 -->
         <p class="hidden-hint">내가 누구를 찾으러 왔더라.</p>
     </div>
 
-    <!-- 정답 입력칸 -->
     <input type="text" id="answerInput" placeholder="..." onkeypress="if(event.keyCode==13) checkAnswer()" autocomplete="off">
 
     <script>
         function checkAnswer() {
             var answer = document.getElementById("answerInput").value.trim().toLowerCase();
             
-            // 2단계 정답을 'level' 이라고 설정했습니다. 
-            // 정답을 맞히면 세 번째 방(level 폴더)으로 이동합니다.
             if(answer === "level") {
                 window.location.href = "/" + answer + "/";
             } else if (answer !== "") {
-                // 오답일 경우 흔들리는 효과나 메시지를 줄 수 있습니다.
                 alert("틀렸습니다.");
-                document.getElementById("answerInput").value = ""; // 입력창 비우기
+                document.getElementById("answerInput").value = "";
             }
         }
     </script>
