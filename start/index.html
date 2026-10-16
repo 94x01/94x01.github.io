@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>미스터리 게임</title>
+    <title>EveryWhen</title>
     <style>
         body {
             background-color: #050505; 
@@ -21,7 +21,7 @@
             text-align: center;
             font-size: 1.1rem;
             line-height: 2;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         .hint {
             font-size: 0.85rem;
@@ -52,17 +52,15 @@
         <p>책상 위에는 쪽지가 하나 놓여 있습니다.</p>
         <br>
         <p>"A는 첫 번째. P는 16번째. 그렇다면 사과는 무엇인가?"</p>
-        <p class="hint">5글자 영어 소문자</p>
     </div>
 
     <!-- 정답 입력칸 -->
-    <input type="text" id="answerInput" placeholder="정답을 입력하세요" onkeypress="if(event.keyCode==13) checkAnswer()" autocomplete="off">
+    <input type="text" id="answerInput" placeholder="..." onkeypress="if(event.keyCode==13) checkAnswer()" autocomplete="off">
 
     <script>
         function checkAnswer() {
             var answer = document.getElementById("answerInput").value.trim().toLowerCase();
             if(answer !== "") {
-                // 정답을 치면 해당 이름의 폴더로 이동합니다 (예: /apple/)
                 window.location.href = "/" + answer + "/";
             }
         }
