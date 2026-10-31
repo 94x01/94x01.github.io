@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EveryWhen</title>
+    <title>0</title>
     <style>
         body {
             background-color: #050505; 
@@ -15,17 +15,26 @@
             font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
             letter-spacing: 1px;
             min-height: 100vh;
+            line-height: 1.9;
             justify-content: flex-start;
             padding: 80px 40px;
             box-sizing: border-box;
         }
         .story {
-            text-align: center;
+            text-align: left;
             font-size: max(1rem, 1.1vw);
             line-height: 2;
             margin-bottom: 8%;
             width: 100%;
             max-width: 600px;
+            word-break: keep-all;
+        }
+        .title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 50px 0;
+            color: #ffffff;
         }
         .hint {
             font-size: 0.85rem;
@@ -40,8 +49,8 @@
             text-align: center;
             font-size:  max(1rem, 1.2vw);
             padding: 10px;
-            width: 80%;
-            max-width: 300px;
+            width: 100%;
+            max-width: 600px;
             outline: none;
             transition: border-bottom 0.3s ease;
             margin-bottom: 15%;
@@ -54,30 +63,31 @@
 <body>
 
     <div class="story">
-        <p>세훈은 어두운 방에서 눈을 떴습니다.</p>
-        <p>책상 위에는 까만 모니터와 리모컨 하나가 놓여 있습니다.</p>
+        <p>세훈이 어두운 방에서 눈을 뜹니다. 눈을 감기 전에 무엇을 했는지 전혀 알 수 없습니다. 알 수 있는 것은 단 하나. 어딘지 모를 이곳에는 책상 하나만 놓여 있습니다. 그 위에는 까만 모니터와 리모컨 하나만이 놓여 있습니다. 어두워 잘 보이진 않았지만, 아마 그랬을 겁니다.</p>
+        <br>
+        <div class="title">EveryWhen</div>
         <br>
         <p>"이게 뭐야......."</p>
+        <p>세훈은 망설이지 않고 리모컨을 쥐러 손을 뻗습니다. 그 순간 화면이 켜집니다. 아무것도 없는 하얀 배경입니다. 어둡던 방 안이 금새 밝아집니다.</p>
         <br>
-        <p>세훈은 손을 뻗어 리모컨을 쥐었습니다.</p>
-        <p>책상 위에는 까만 모니터와 리모컨 하나가 놓여 있습니다.</p>
-        <p>그 순간 화면이 켜졌습니다.</p>
-        <p>책상 위에는 까만 모니터와 리모컨 하나가 놓여 있습니다.</p>
+        <p>빛이 눈에 들어오자 세훈은 제 손에 들린 리모컨을 내려다 봅니다. </p>
+        <p>리모컨에는 버튼이 단 두 개. PLAY 버튼과 RETURN 버튼 뿐입니다.
+</p>
         <br>
-        <p>리모컨에는 버튼이 세 개.</p>
-        <p>재생 버튼과 정지 버튼.</p>
-        <br>
-        <p>"뭐라도 눌러봐야 하나?"</p>
+        <p>"이게 뭐지. 눌러봐야 하나?"</p>
     </div>
 
-    <!-- 정답 입력칸 -->
     <input type="text" id="answerInput" placeholder="..." onkeypress="if(event.keyCode==13) checkAnswer()" autocomplete="off">
-
+</div>
+    
     <script>
         function checkAnswer() {
             var answer = document.getElementById("answerInput").value.trim().toLowerCase();
-            if(answer !== "") {
+            if(answer === "play" || answer === "return") {
                 window.location.href = "/" + answer + "/";
+            } else if (answer !== "") {
+                alert("아무 일도 일어나지 않았다.");
+                document.getElementById("answerInput").value = ""; 
             }
         }
     </script>
