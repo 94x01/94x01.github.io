@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EveryWhen - True Ending</title>
+    <style>
+        body {
+            background-color: #050505; 
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            letter-spacing: 1px;
+            min-height: 100vh;
+            line-height: 1.9;
+            justify-content: flex-start;
+            padding: 80px 40px;
+            box-sizing: border-box;
+        }
+        .story {
+            text-align: left;
+            font-size: max(1rem, 1.1vw);
+            line-height: 2;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 600px;
+            word-break: keep-all;
+        }
+        .title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin: 80px 0 40px 0;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
 
+    <div id="player" style="display:none;"></div>
+
+    <div class="story">
+        <p>삑.<br>
+        삑.<br>
+        삑.......<br>
+        일정한 간격에 기계음이 귀에 들려옵니다. 아마 세훈의 기억에 의하면 이곳은 병원 2인실입니다. 옆 침대는 비어 있습니다. 세훈은 한숨을 내쉬며, 다시 눈을 감습니다. 형이 원하던 게 정말 이거야? 묻고 싶은 마음이 가득합니다.</p>
+      <br>
+        <div class="title"># 트루엔딩</div>
+    </div>
+
+    <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '0',
+                width: '0',
+                videoId: 'X0hJzvGh2Ww',
+                playerVars: {
+                    'autoplay': 1,
+                    'controls': 0
+                },
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.setVolume(50);
+            event.target.playVideo();
+        }
+    </script>
+
+</body>
+</html>
