@@ -85,15 +85,14 @@
 
     <input type="text" id="answerInput" placeholder="..." onkeypress="if(event.keyCode==13) checkAnswer()" autocomplete="off">
 
-    <script>
+     <script>
         function checkAnswer() {
             var answer = document.getElementById("answerInput").value.trim().toLowerCase();
-            
-            if(answer === "open") {
+            if(answer === "no" || answer === "yes") {
                 window.location.href = "/" + answer + "/";
             } else if (answer !== "") {
                 alert("아무 일도 일어나지 않았다.");
-                document.getElementById("answerInput").value = "";
+                document.getElementById("answerInput").value = ""; 
             }
         }
     </script>
