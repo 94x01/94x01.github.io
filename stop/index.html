@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-2</title>
+    <style>
+        body {
+            background-color: #050505; 
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            letter-spacing: 1px;
+            min-height: 100vh;
+            line-height: 1.9;
+            justify-content: flex-start;
+            padding: 80px 40px;
+            box-sizing: border-box;
+        }
+      .button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 80px;
+      }
+      .back-btn {
+        background: transparent;
+        border: 1px solid #555;  
+        color: #e0e0e0;             
+        padding: 10px 24px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+      .back-btn:hover, .back-btn:active {
+        background: #ffffff;       
+        color: #000000;             
+        border-color: #ffffff;
+      }
+        .story {
+            text-align: left;
+            font-size: max(1rem, 1.1vw);
+            line-height: 2;
+            margin-bottom: 8%;
+            width: 100%;
+            max-width: 600px;
+            word-break: keep-all;
+        }
+        .title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 50px 0;
+            color: #ffffff;
+        }
+        .hint {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 20px;
+        }
+      
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #555; 
+            color: white;
+            text-align: center;
+            font-size:  max(1rem, 1.2vw);
+            padding: 10px;
+            width: 100%;
+            max-width: 600px;
+            outline: none;
+            transition: border-bottom 0.3s ease;
+            margin-bottom: 15%;
+        }
+        input:focus {
+            border-bottom: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="story">
+        <p>"잘 선택했어.".</p>
+      <br>
+      <p>복도 끝 셔터는 점점 더 내려옵니다. 아무리 생각해도 교실로 피하는 것이 합리적인 선택입니다. 교실의 준면을 믿었기보다, 뒤에 있는 저것을 피하는 게 우선입니다. 세훈은 고민 끝에 교실로 들어갑니다. </p>
+      <p>문을 열자 평범한, 조금 어질러진 교실입니다. 조금…. 아늑합니다. 공간의 색은 없었던 것 같지만, 굳이 표현하자면 노란색인 것 같습니다. 따뜻한 바람이 일렁입니다. </p>
+        <br>
+      <p>"훈아, 우리 더 이상 아프지 말자."</p>
+        <p>형이 말하는 바를 온전히 이해할 수는 없지만, 세훈을 안아주는 준면의 손길이 너무나 달콤해서…. "네...." 대답하고 맙니다.</p>
+        <p>"여기서 우리 둘이 행복하게 살자."</p>
+        <p>이것 또한 아름다운 결말이라면, 결말이겠죠. 아마 교실 안에 갇혀있겠지만, 갇혀있다는 사실을 모르는 그들은 행복할지도 모릅니다.</p>
+        <br>
+      <div class="title"># 엔딩 2. 체념</div>
+    </div>
+
+
+
+</body>
+<div class="button">
+    <button class="back-btn" onclick="goMain()">돌아가기</button>
+</div>
+
+<script>
+    function goMain() {
+        window.location.href = "/main/";
+    }
+</script>
+</html>
