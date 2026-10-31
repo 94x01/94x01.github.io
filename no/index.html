@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            justify-content: flex-start; 
+            min-height: 100vh;          
+            padding: 80px 40px;          
+            box-sizing: border-box;
+            
+            margin: 0;
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            letter-spacing: 1.5px;
+        }
 
+        .story {
+            text-align: center;
+            font-size: max(1rem, 1.1vw); 
+            line-height: 2.2;
+            margin-bottom: 8%;        
+            width: 100%;
+            max-width: 600px;           
+        }
+
+        .hidden-hint {
+            color: #000;
+            transition: color 0.5s ease;
+        }
+        .hidden-hint:hover, .hidden-hint:active {
+            color: #880000; 
+            cursor: pointer;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #444;
+            color: white;
+            text-align: center;
+            
+            font-size: max(1rem, 1.2vw); 
+            padding: 10px;
+            width: 80%;                 
+            max-width: 300px;           
+            
+            outline: none;
+            transition: border-bottom 0.3s ease;
+            margin-top: 30px;
+            margin-bottom: 80px;       
+        }
+        input:focus {
+            border-bottom: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/PkedbUCv8d8?autoplay=1" frameborder="0" allow="autoplay"></iframe>
+
+    <div class="story">
+        <p>"아니요...."</p>
+      <p>의외의 솔직함에 준면이 흠칫 몸을 움츠리며 놀랍니다. </p>
+      <br>
+      <p>"저건 뭐예요? 형은 왜 여기 있고?"</p>
+      <p>심지어 준면은 이 곳의 모든 것에 익숙해 보입니다. 덜덜 떨리는 손으로도 활을 능숙하게 정리하고 있습니다. 세훈은 궁금합니다. 제가 왜 이곳에 오게 되었고, 형은 왜 이곳에서 저를 기다리고 있었는지를.......
+</p>
+      <br>
+      <p>"나도 몰라."</p>
+      <p>준면이 거짓말하는 것 같지는 않습니다. 세훈은 준면을 잘 알고 있습니다.</p>
+      <br>
+      <p>"형은 언제부터 있었어요?"</p>
+      <p>"기억이 안 나. 몇 번째인지도......."</p>
+      <p>순간 준면의 얼굴이 굳습니다. 아마 떠오르기 싫은 기억을 떠올려서일까요. 아니면 저 자신에 대한 ■■ 때문일까요.</p>
+        <br>
+      <p>쿠구궁.</p>
+      <p>쿵.</p>
+      <p>쿠궁.</p>
+      <p>불길한 소리가 ■■ 너머에서 들립니다. ■■한 ■■들이…. 셔터를 열고 싶어 하는 것 같습니다.</p>
+      <br>
+        <p>쿠■■.</p>
+      <p>끄그그극.</p>
+      <p>■■둥.</p>
+      <p>쿵.</p>
+      <p>쿠궁.</p>
+      <p>까드득.</p>
+      <p>.......</p>
+      <br>
+      <p>까드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드득.</p>
+      <p>까드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드드득.</p>
+      <br>
+      <p>손에 꼭 쥐고 있던 활을 떨어트린 준면이 세훈을 강하게 밀칩니다…. 세훈은 저항 없이 그대로 밀려납니다.</p>
+      <p>"미안해…. 내가 꼭 널 구하겠다고 했는데, 내가 이거밖에 안되는 사람이라서......."</p>
+      <br>
+      <p>천장이 무너집니다. 툭. 투둑투둑. 커다란 ■■들이 하나둘 준면에게로 떨어지려고 합니다. </p>
+      <br>
+      <p>"내가 못 버텨서, 정말 미안해......."</p>
+        <br>
+        
+    </div>
+
+    <input type="text" id="answerInput" placeholder="..." onkeypress="if(event.keyCode==13) checkAnswer()" autocomplete="off">
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answerInput").value.trim().toLowerCase();
+            
+            if(answer === "sorry") {
+                window.location.href = "/" + answer + "/";
+            } else if (answer !== "") {
+                alert("아무 일도 일어나지 않았다.");
+                document.getElementById("answerInput").value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
