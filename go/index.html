@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-1</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            justify-content: flex-start; 
+            min-height: 100vh;          
+            padding: 80px 40px;          
+            box-sizing: border-box;
+            
+            margin: 0;
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            letter-spacing: 1.5px;
+        }
+
+        .story {
+            text-align: center;
+            font-size: max(1rem, 1.1vw); 
+            line-height: 2.2;
+            margin-bottom: 8%;        
+            width: 100%;
+            max-width: 600px;           
+        }
+
+        .hidden-hint {
+            color: #000;
+            transition: color 0.5s ease;
+        }
+        .hidden-hint:hover, .hidden-hint:active {
+            color: #880000; 
+            cursor: pointer;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #444;
+            color: white;
+            text-align: center;
+            
+            font-size: max(1rem, 1.2vw); 
+            padding: 10px;
+            width: 80%;                 
+            max-width: 300px;           
+            
+            outline: none;
+            transition: border-bottom 0.3s ease;
+            margin-top: 30px;
+            margin-bottom: 80px;       
+        }
+        input:focus {
+            border-bottom: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/o8Htm2OFV1U?autoplay=1" frameborder="0" allow="autoplay"></iframe>
+  
+    <div class="story">
+        <p>세훈은 당장 뒤에서 저를 쫓아오는 그것으로부터 나는 소리를 듣고 도저히 멈출 수 없습니다. 준면이 그랬듯 셔터 아래로 몸을 던집니다. </p>
+      <p>"오, 이번에는 의외네. 안 올 줄 알았어."</p>
+      <p>이미 정비를 마친 후 세훈을 기다리고 있는 준면의 눈이 조금 커집니다.</p>
+        <br>
+        <p>철컥.</p>
+      <p>셔터가 닫힙니다.</p>
+      <p>"아니, 형이 저를 구했잖아요...."</p>
+      <p>세훈은 가쁜 숨을 몰아쉽니다. 셔터 너머에서 절규? 절망에 가까운 미지의 소리가 들립니다. 준면이 주머니에서 손수건을 꺼내 세훈에게 건넵니다. 언젠가 세훈이 준면에게 선물해 주었던, 준면에게는 어쩌면 부적과도 같은.......</p>
+        <br>
+        <p>"그래, 믿어줘서 고마워. 양궁부실로 가자. 너 활도 챙기고 나도........"</p>
+        <p>준면이 끝 말을 흐렸지만, 세훈은 그의 팔에 스친 자국에서 미미하게나마 피가 흐르는 것을 분명히 봅니다. 세훈은 손수건으로 이마의 땀을 훔치면서도 말 없이 고개를 끄덕입니다.</p>
+        <p>"훈아, 넌 괜찮아?"</p>
+        <br>
+        
+    </div>
+
+    <input type="text" id="answerInput" placeholder="..." onkeypress="if(event.keyCode==13) checkAnswer()" autocomplete="off">
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answerInput").value.trim().toLowerCase();
+            
+            if(answer === "open") {
+                window.location.href = "/" + answer + "/";
+            } else if (answer !== "") {
+                alert("아무 일도 일어나지 않았다.");
+                document.getElementById("answerInput").value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
