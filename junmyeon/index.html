@@ -3,74 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3</title>
+    <title>2</title>
     <style>
         body {
-            background-color: #050505;
-            color: #e0e0e0;
+            background-color: #000;
+            color: #ccc;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-            padding: 80px 40px;
+            
+            justify-content: flex-start; 
+            min-height: 100vh;          
+            padding: 80px 40px;          
             box-sizing: border-box;
+            
             margin: 0;
             font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
             letter-spacing: 1.5px;
-
-            animation: bg-flicker 7s infinite;
-        }
-
-        /* 2. 기괴한 배경 조명 깜빡임 키프레임 */
-        @keyframes bg-flicker {
-            0%, 100% { background-color: #050505; }
-            48% { background-color: #050505; }
-            49% { background-color: #1a0505; } 
-            50% { background-color: #050505; }
-            75% { background-color: #050505; }
-            76% { background-color: #1f1f1f; } 
-            77% { background-color: #050505; }
-            78% { background-color: #1a1a1a; }
-            79% { background-color: #050505; }
         }
 
         .story {
             text-align: center;
-            font-size: max(1rem, 1.1vw);
+            font-size: max(1rem, 1.1vw); 
             line-height: 2.2;
-            margin-bottom: 8%;
+            margin-bottom: 8%;        
             width: 100%;
-            max-width: 600px;
+            max-width: 600px;           
         }
 
-        .flicker-text {
-            animation: eerie-flicker 2.5s infinite alternate;
-            display: inline-block;
+        .hidden-hint {
+            color: #000;
+            transition: color 0.5s ease;
         }
-
-        @keyframes eerie-flicker {
-            0%, 100% { opacity: 1; text-shadow: 0 0 2px #fff; }
-            12% { opacity: 0.3; text-shadow: none; }
-            13% { opacity: 1; text-shadow: 0 0 6px #ff0000; }
-            14% { opacity: 0.1; }
-            15% { opacity: 0.9; text-shadow: 0 0 3px #ff0000; }
-            16% { opacity: 0.2; }
-            17% { opacity: 1; text-shadow: 0 0 2px #fff; }
-            70% { opacity: 1; text-shadow: 0 0 2px #fff; }
-            71% { opacity: 0.2; text-shadow: 0 0 10px #ff0000; }
-            72% { opacity: 1; text-shadow: 0 0 2px #fff; }
-        }
-
-        .glitch-red {
-            color: #b30000;
-            font-weight: bold;
-            animation: red-glow 1.5s infinite alternate;
-        }
-
-        @keyframes red-glow {
-            0% { text-shadow: 0 0 2px #500; }
-            100% { text-shadow: 0 0 12px #f00, 0 0 20px #800; }
+        .hidden-hint:hover, .hidden-hint:active {
+            color: #880000; 
+            cursor: pointer;
         }
 
         input {
@@ -79,16 +46,17 @@
             border-bottom: 1px solid #444;
             color: white;
             text-align: center;
-            font-size: max(1rem, 1.2vw);
+            
+            font-size: max(1rem, 1.2vw); 
             padding: 10px;
-            width: 80%;
-            max-width: 300px;
+            width: 80%;                 
+            max-width: 300px;           
+            
             outline: none;
             transition: border-bottom 0.3s ease;
             margin-top: 30px;
-            margin-bottom: 80px;
+            margin-bottom: 80px;       
         }
-
         input:focus {
             border-bottom: 1px solid #fff;
         }
@@ -96,14 +64,34 @@
 </head>
 <body>
 
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/PkedbUCv8d8?autoplay=1" frameborder="0" allow="autoplay"></iframe>
+
     <div class="story">
-        <p>복도 끝 조명이 기괴하게 <span class="flicker-text">깜빡거리기</span> 시작합니다.</p>
-        <p>벽면을 따라 불쾌한 진동이 전해져 옵니다.</p>
+        <p>"김준면?"</p>
+        <p>준면은 저도 모르게 이를 악뭅니다. 그리고 양궁 활을 왼손으로 든 채 성큼성큼 세훈에게 다가갑니다. 무릎을 꿇고 그것에게서 준면의 화살을 뽑아내려 하는 세훈의 어깨를, 오른손으로 강하게 쥐며 준면이 묻습니다.</p>
         <br>
-        <p>어둠 속에서 무언가 치직거리는 소리와 함께</p>
-        <p>붉은 글씨가 떠올랐다 사라집니다.</p>
+        <p>"내가, 어떻게…. 너 왜 여기 있냐고......."</p>
+        <p>그야 형을 찾으러 왔다고, 세훈은 분명히 말하기 위해 입을 엽니다. 그러나 세훈의 말은 그것의 괴상한 소리로 인해 막힙니다.</p>
+        <p>"됐어, 세훈아. 뛰어."</p>
         <br>
-        <p class="glitch-red">"그림자는 빛이 사라질 때 가장 길어진다."</p>
+        <p>준면이 세훈의 손을 잡습니다. 뒤에서 철퍽철퍽 대며 ■■들이 쫓아오는 소리가 학교에 가득한데도, 준면과 함께라는 이유로 세훈은 괜찮은 것 같습니다.</p>
+        <p>헉.</p>
+        <p>헉....</p>
+        <br>
+        <p>세훈은 아직 괜찮습니다만, 준면은 손에 든 활 때문이었을까요. 아니면 ■년 전 사고 때문이었을까요. 지쳐 보입니다. 끝없는 복도를 달립니다. 어느새 세훈이 준면의 앞에서 그를 이끌고 있었습니다. 복도 끄트머리가 보입니다. 스르륵…. 화재 방지 셔터가 내려오고 있습니다.</p>
+        <p>드르륵.</p>
+        <br>
+        <p>"세훈아, 멈춰!"</p>
+        <p>아?</p>
+        <br>
+        <p>"걔는 가짜야, 너 그 셔터 안으로 들어가면 못 나와!"</p>
+        <p>세훈은 고개를 살짝 돌려 제 옆에 있는 준면을 봅니다. 형은 여기에 있는데, 저건 누구야? 준면은 땀에 젖어 숨만 격하게 몰아쉬고 있습니다.</p>
+        <p>"가지 마, 세훈아…. 교실로 들어와서 일단 피해."</p>
+        <br>
+        <p>세훈은 누구를 믿어야 할까요. 계속 가야 할까요, 아니면 멈춰서 교실로 들어가야 할까요. 고민하던 찰나에 준면이 먼저 내려오는 셔터 아래로 미끄러져 들어갑니다.</p>
+        <p>"아니야, 훈아. 계속 달려. 셔터 아래로 미끄러져서 들어오면 당장은 안전해."</p>
+        <br>
+        
     </div>
 
     <input type="text" id="answerInput" placeholder="..." onkeypress="if(event.keyCode==13) checkAnswer()" autocomplete="off">
@@ -111,12 +99,12 @@
     <script>
         function checkAnswer() {
             var answer = document.getElementById("answerInput").value.trim().toLowerCase();
-
-            if(answer === "shadow") {
+            
+            if(answer === "junmyeon") {
                 window.location.href = "/" + answer + "/";
             } else if (answer !== "") {
                 alert("아무 일도 일어나지 않았다.");
-                document.getElementById("answerInput").value = ""; 
+                document.getElementById("answerInput").value = "";
             }
         }
     </script>
